@@ -115,7 +115,7 @@ public class AnnounceFragment extends BottomSheetDialogFragment {
                 expiryDate = null;
             }
 
-            Announcement announcement = new Announcement(FirebaseAuth.getInstance().getUid(), announceAnonymousPostCheckBox.isChecked(), announceTitle.getText().toString(), annnounceMessage.getText().toString(), attachments, new Date(), expiryDate);
+            Announcement announcement = new Announcement(FirebaseAuth.getInstance().getUid(), announceAnonymousPostCheckBox.isChecked(), announceTitle.getText().toString(), annnounceMessage.getText().toString(), attachments, new Date(), expiryDate, false);
             announcementFirestoreList.add(announcement);
             AnnounceFragment.this.dismiss();
             onNotifyListener.onNotify();

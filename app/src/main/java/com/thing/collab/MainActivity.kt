@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.announceBtn -> {
                 val fragment = AnnounceFragment.newInstance()
                 fragment.show(supportFragmentManager, "announce_modal_dialog")
-            } else -> Log.e(TAG, "View not handled")
+            }
+            else -> Log.e(TAG, "View not handled")
         }
     }
 

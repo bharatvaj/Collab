@@ -1,7 +1,6 @@
 package com.thing.collab.model;
 
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
@@ -22,11 +21,13 @@ public class Announcement {
 
     private Date expiryDate;
 
+    private boolean isImportant;
+
     public Announcement() {
 
     }
 
-    public Announcement(String firebaseUid, Boolean isAnonymousPost, String title, String message, List<String> attachments, Date announceDate, Date expiryDate) {
+    public Announcement(String firebaseUid, Boolean isAnonymousPost, String title, String message, List<String> attachments, Date announceDate, Date expiryDate, boolean isImportant) {
         this.isAnonymousPost = isAnonymousPost;
         this.message = message;
         this.attachments = attachments;
@@ -34,6 +35,7 @@ public class Announcement {
         this.title = title;
         this.expiryDate = expiryDate;
         this.announceDate = announceDate;
+        this.isImportant = isImportant;
     }
 
     public String getFirebaseUid() {
@@ -103,5 +105,11 @@ public class Announcement {
         this.expiryDate = expiryDate;
     }
 
+    public void setIsImportant(boolean isImprotant){
+        this.isImportant = isImprotant;
+    }
 
+    public boolean getIsImportant() {
+        return isImportant;
+    }
 }

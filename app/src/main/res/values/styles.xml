@@ -1,14 +1,5 @@
 <resources>
 
-    <style name="AppTheme.Button" parent="Base.TextAppearance.AppCompat.Button">
-        <item name="android:background">@drawable/button_background</item>
-        <item name="android:foreground">?attr/selectableItemBackground</item>
-        <item name="android:textColor">?attr/colorPrimary</item>
-        <item name="android:padding">@dimen/activity_horizontal_margin</item>
-        <item name="android:drawable">@null</item>
-        <item name="android:gravity">center</item>
-    </style>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
@@ -53,6 +44,14 @@
     <style name="AppTheme.DangerFullPageButtons">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:backgroundTint">@color/colorHardRed</item>
+    </style>
+    <style name="AppTheme.Button" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:padding">@dimen/activity_horizontal_margin</item>
+        <item name="android:drawable">@null</item>
+        <item name="android:gravity">center</item>
     </style>
 
 </resources>

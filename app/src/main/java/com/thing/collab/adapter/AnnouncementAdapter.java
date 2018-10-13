@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
+import java.util.Date;
 import java.util.List;
 
 import butterknife.BindView;
@@ -70,7 +71,12 @@ public class AnnouncementAdapter extends RecyclerView.Adapter<AnnouncementAdapte
                     break;
             }
         });
-
+        if(announcement.getIsImportant()) {
+            holder.itemView.setBackground(context.getDrawable(R.drawable.attachment_important_bg));
+        }
+        if(announcement.getExpiryDate() != null && announcement.getExpiryDate().compareTo(new Date()) > 0){
+            holder.itemView.setAlpha(0.4f);
+        }
         holder.announcementTitle.setText(announcement.getTitle());
         holder.announcementMessage.setText(announcement.getMessage());
         List<String> attachments = announcement.getAttachments();
@@ -91,11 +97,11 @@ public class AnnouncementAdapter extends RecyclerView.Adapter<AnnouncementAdapte
 
     public class AnnouncementViewHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.announcerImage)
+        @BindView(R.id.userImage)
         CircleImageView announcerImage;
-        @BindView(R.id.announcementTitle)
+        @BindView(R.id.user_caption)
         TextView announcementTitle;
-        @BindView(R.id.announcementMessage)
+        @BindView(R.id.userSubtitle)
         TextView announcementMessage;
         @BindView(R.id.attachmentContainer)
         LinearLayout attachmentContainer;
