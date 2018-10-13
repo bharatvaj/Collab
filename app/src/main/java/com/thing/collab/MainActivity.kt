@@ -11,33 +11,28 @@ import com.thing.collab.model.Announcement
 import com.thing.collab.handler.UserHandler
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
 
     private val TAG = "MainActivity"
-
-    override fun onClick(v: View?) {
-        when (v?.id) {
-            R.id.announceBtn -> {
-                val fragment = AnnounceFragment.newInstance()
-                fragment.show(supportFragmentManager, "announce_modal_dialog")
-            }
-            else -> Log.e(TAG, "View not handled")
-        }
-    }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        announceBtn.setOnClickListener(this)
-
         var announcements =
             FirestoreList<Announcement>(Announcement::class.java, UserHandler.getInstance().announcementsRef)
         var adapter = AnnouncementAdapter(this, announcements)
-
         announcementRecyclerView.adapter = adapter
         announcementRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
+        announceAddBtn.setOnClickListener {
+            val fragment = AnnounceFragment.newInstance()
+//            fragment.setOnNotifyListener {
+//                announcements.populate(20)
+//                adapter.notifyDataSetChanged()
+//            }
+            fragment.show(supportFragmentManager, "announce_modal_dialog")
+        }
 
         announcements.setOnAddListener { id: String, announcement: Announcement ->
             adapter.notifyDataSetChanged()
@@ -48,6 +43,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         announcements.setOnDeleteListener { id: String, announcement: Announcement ->
             adapter.notifyDataSetChanged()
         }
-        announcements.populate(20)
+        //announcements.populate(20)
     }
 }

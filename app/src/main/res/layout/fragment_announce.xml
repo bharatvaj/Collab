@@ -57,6 +57,13 @@
                     android:layout_height="wrap_content"
                     android:text="@string/announce_expiry_date"/>
 
+            <CheckBox
+                    android:id="@+id/importantCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/announce_important"/>
+
+
             <android.support.v7.widget.RecyclerView
                     android:id="@+id/announceAttachmentRecyclerView"
                     android:layout_width="match_parent"
@@ -90,7 +97,7 @@
             </LinearLayout>
 
             <Button
-                    android:id="@+id/dismiss"
+                    android:id="@+id/announceBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/announce_action_announce"/>

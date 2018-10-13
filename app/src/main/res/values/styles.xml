@@ -1,5 +1,4 @@
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
@@ -8,9 +7,6 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@color/colorPrimaryDark</item>
         <item name="android:buttonStyle">@style/AppTheme.Button</item>
-        <!--chat-->
-        <item name="chatMeBackground">@color/colorPrimaryDark</item>
-        <item name="chatOthersBackground">@color/colorPrimary</item>
     </style>
 
     <style name="AppTheme.Light" parent="Theme.AppCompat.Light.NoActionBar">
@@ -19,10 +15,6 @@
         <item name="colorAccent">@color/colorLightAccent</item>
         <item name="android:windowBackground">@color/colorLightPrimaryDark</item>
         <item name="android:buttonStyle">@style/AppTheme.Button</item>
-
-        <!--chat-->
-        <item name="chatMeBackground">@color/colorHardGrey</item>
-        <item name="chatOthersBackground">@color/colorSoftGrey</item>
     </style>
 
     <style name="AppTheme.Amoled" parent="Theme.AppCompat.NoActionBar">
@@ -36,10 +28,6 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="AppTheme.DangerFullPageButtons">
         <item name="android:textColor">@android:color/white</item>

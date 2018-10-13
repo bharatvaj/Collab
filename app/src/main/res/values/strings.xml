@@ -85,4 +85,5 @@
     <string name="profile_add_link">Tap to add link</string>
     <string name="no_test">Test will be scheduled only from Monday to Friday</string>
     <string name="no_test_header">No test</string>
+    <string name="announce_important">Post as important</string>
 </resources>
