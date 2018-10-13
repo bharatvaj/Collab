@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "538693403744",
+    "firebase_url": "https://thing-85554.firebaseio.com",
+    "project_id": "thing-85554",
+    "storage_bucket": "thing-85554.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538693403744:android:ef7ecb88807b3734",
+        "android_client_info": {
+          "package_name": "com.thing.collab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538693403744-45pda4s52g7k9ihf6gr6kdgpca1clhlp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzcwoSWO51XurCSLMej9o0Bw5uXwHRgVs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
