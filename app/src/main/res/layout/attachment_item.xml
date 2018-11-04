@@ -11,9 +11,9 @@
     android:padding="8dp">
 
     <TextView
-        android:layout_width="@dimen/activity_horizontal_margin"
-        android:layout_height="@dimen/activity_horizontal_margin"
-        android:text="@string/donwload_icon" />
+        android:layout_width="@dimen/margin_medium"
+        android:layout_height="@dimen/margin_medium"
+        android:text="@string/page_unicode" />
 
     <TextView
         android:id="@+id/attachmentName"

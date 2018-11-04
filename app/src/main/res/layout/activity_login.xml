@@ -11,39 +11,47 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:gravity="center"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:orientation="vertical">
+        <ImageView
+                android:src="@drawable/ic_thing_logo"
+                android:layout_width="@dimen/image_medium"
+                android:layout_height="@dimen/image_medium"/>
+        <LinearLayout
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingBottom="@dimen/margin_small"
+                android:orientation="vertical"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:id="@+id/loginInputEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/login_email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"/>
 
-        <EditText
-                android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/activity_horizontal_margin"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:textColor="@android:color/white"
-                android:textColorHint="@android:color/white"/>
 
-
-        <EditText
-                android:id="@+id/password"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:textColor="@android:color/white"
-                android:textColorHint="@android:color/white"/>
-
+            <EditText
+                    android:id="@+id/loginInputPass"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:hint="@string/login_password"
+                    android:inputType="textPassword"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"/>
+        </LinearLayout>
         <Button
-                android:id="@+id/btn_login"
-                android:layout_width="fill_parent"
+                android:id="@+id/loginBtn"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dip"
-                android:backgroundTint="@android:color/white"
                 android:src="@drawable/chevron_right_icon"
-                android:text="Login"
-                android:textColor="@android:color/black"/>
+                android:text="@string/login"/>
     </LinearLayout>
 
     <ProgressBar

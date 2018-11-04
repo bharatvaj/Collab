@@ -6,8 +6,8 @@
         android:layout_height="wrap_content"
         android:background="@drawable/announcement_bg"
         android:orientation="vertical"
-        android:layout_margin="@dimen/view_padding_small"
-        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_margin="@dimen/margin_small"
+        android:padding="@dimen/margin_medium"
         app:cardCornerRadius="@dimen/cardview_default_radius">
 
     <include
@@ -29,7 +29,7 @@
                 android:src="@drawable/attachment_icon"/>
 
         <android.support.v7.widget.RecyclerView
-                android:id="@+id/attachementRecyclerView"
+                android:id="@+id/attachmentRecyclerView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

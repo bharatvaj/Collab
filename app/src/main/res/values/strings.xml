@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Collab</string>
+    <string name="app_name">Allied</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>`
@@ -55,7 +55,7 @@
     <string name="announcement_fragment_title">Announcement</string>
     <string name="inbox_fragment_title">Inbox</string>
 
-    <!--fragment_announce-->
+    <!--announce_layout-->
     <string name="announce_title_hint">Title</string>
     <string name="announce_message_hint">Message</string>
     <string name="announce_post_anonymous">Post as Anonymous</string>
@@ -66,24 +66,18 @@
     <string name="under_construction_text">Page under construction</string>
     <string name="title_activity_settings">Settings</string>
 
-    <string name="settings_pref_file">setting_pref_file</string>
-    <string name="settings_isDark">settingsIsDark</string>
-    <string name="settings_theme_toggle">Dark Theme</string>
-    <string name="settings_isAdmin">settingsIsAdmin</string>
-
-
-    <string name="chat_action_video_call">Video Call</string>
-    <string name="donwload_icon">⇩</string>
+    <string name="page_unicode" translatable="false">🗋</string>
     <string name="logout">Logout</string>
 
-    <string name="finishNetworkDown">An error has occurred, please try again later</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="announce_expiry_date">Post with expiry date</string>
     <string name="announce_add_file_hint">Add files with url</string>
-    <string name="profile_add_link">Tap to add link</string>
-    <string name="no_test">Test will be scheduled only from Monday to Friday</string>
-    <string name="no_test_header">No test</string>
+    <string name="profile_add_contact">Add Contact</string>
     <string name="announce_important">Post as important</string>
+    <string name="login">Login</string>
+    <string name="login_password">Password</string>
+    <string name="login_email">Email</string>
+
+    <string name="user_not_available">User not available at the moment</string>
+    <string name="user_anonymous">User posted anonymously</string>
+    <string name="attachment_empty">Attachment should not be empty, provide a valid url or browse a file</string>
 </resources>
