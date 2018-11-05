@@ -57,7 +57,7 @@
 
     <!--announce_layout-->
     <string name="announce_title_hint">Title</string>
-    <string name="announce_message_hint">Message</string>
+    <string name="announce_message_hint">Enter message here</string>
     <string name="announce_post_anonymous">Post as Anonymous</string>
     <string name="announce_action_announce">Announce</string>
     <string name="announce_action_add_attachment">Add attachment</string>
@@ -80,4 +80,7 @@
     <string name="user_not_available">User not available at the moment</string>
     <string name="user_anonymous">User posted anonymously</string>
     <string name="attachment_empty">Attachment should not be empty, provide a valid url or browse a file</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

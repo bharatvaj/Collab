@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="64dp"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        android:orientation="vertical">
+
+    <!--<com.github.badoualy.datepicker.DatePickerTimeline-->
+    <!--android:id="@+id/expiryDatePicker"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"/>-->
+
+
+    <LinearLayout
+            android:layout_margin="@dimen/margin_medium"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <android.support.design.widget.FloatingActionButton
+                android:visibility="visible"
+                android:src="@drawable/tick_icon"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_small"
+                android:tint="?colorPrimary"
+                android:id="@+id/announceBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/announce_action_announce"/>
+        <EditText
+                android:layout_weight="1"
+                android:padding="@dimen/margin_small"
+                android:id="@+id/announceTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/announce_title_hint"/>
+
+    </LinearLayout>
+
+    <EditText
+            android:layout_weight="1"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:lines="3"
+            android:hint="@string/announce_message_hint"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:paddingLeft="@dimen/margin_medium"
+            android:paddingRight="@dimen/margin_medium"
+            android:id="@+id/announceMessage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+    <!--<CheckBox-->
+    <!--android:id="@+id/announceAnonymousPostCheckBox"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/announce_post_anonymous"/>-->
+
+    <!--<CheckBox-->
+    <!--android:id="@+id/expiryCheckBox"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/announce_expiry_date"/>-->
+
+    <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+                android:layout_weight="1"
+                android:id="@+id/announceAttachmentRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        <ImageButton
+                android:id="@+id/attachmentAddButton"
+                android:layout_margin="@dimen/margin_small"
+                android:drawableStart="@drawable/attachment_icon"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_small"
+                android:src="@drawable/attachment_icon"/>
+    </LinearLayout>
+
+
+</LinearLayout>

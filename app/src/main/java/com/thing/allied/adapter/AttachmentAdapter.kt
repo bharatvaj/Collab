@@ -25,18 +25,7 @@ class AttachmentAdapter(internal var context: Context?, private var attachments:
 
     override fun onBindViewHolder(holder: AttachmentViewHolder, position: Int) {
         val fileUrl = attachments[position]
-        //TODO Get filename from url
-        holder.itemView.setOnClickListener {
-            try {
-                val i = Intent(Intent.ACTION_VIEW)
-                i.data = Uri.parse(fileUrl)
-                context?.startActivity(i)
-            } catch (anfe: ActivityNotFoundException) {
-                Log.e(TAG, anfe.message)
-            }
-        }
-        val fileName = fileUrl.substring(fileUrl.lastIndexOf('/') + 1)
-        holder.attachmentName.text = fileName
+        holder.bind(fileUrl)
     }
 
     override fun getItemCount(): Int {
@@ -45,7 +34,22 @@ class AttachmentAdapter(internal var context: Context?, private var attachments:
 
     inner class AttachmentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        var attachmentName: TextView = itemView.attachmentName!!
+        private val textView = itemView as TextView
+
+        fun bind(fileUrl: String) {
+            //TODO Get filename from url
+            textView.setOnClickListener {
+                try {
+                    val i = Intent(Intent.ACTION_VIEW)
+                    i.data = Uri.parse(fileUrl)
+                    context?.startActivity(i)
+                } catch (anfe: ActivityNotFoundException) {
+                    Log.e(TAG, anfe.message)
+                }
+            }
+            val fileName = fileUrl.substring(fileUrl.lastIndexOf('/') + 1)
+            textView.text = fileName
+        }
 
     }
 

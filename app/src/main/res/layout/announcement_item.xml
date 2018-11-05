@@ -6,36 +6,42 @@
         android:layout_height="wrap_content"
         android:background="@drawable/announcement_bg"
         android:orientation="vertical"
-        android:layout_margin="@dimen/margin_small"
-        android:padding="@dimen/margin_medium"
+        android:layoutAnimation="@anim/layout_animation_falldown"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
         app:cardCornerRadius="@dimen/cardview_default_radius">
 
-    <include
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            layout="@layout/user_details"/>
-
     <LinearLayout
-            android:id="@+id/attachmentContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-        <ImageView
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:orientation="vertical"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/announcementHeader"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/attachment_icon"/>
-
-        <android.support.v7.widget.RecyclerView
-                android:id="@+id/attachmentRecyclerView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingBottom="8dp"
-                android:paddingTop="8dp"/>
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:layout_marginTop="@dimen/margin_small"
+                android:id="@+id/announcementMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
     </LinearLayout>
 
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/attachmentRecyclerView"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <include
+            android:layout_margin="@dimen/margin_small"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/user_announcement_details"/>
 </LinearLayout>
 

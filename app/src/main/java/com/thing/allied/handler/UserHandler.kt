@@ -6,6 +6,8 @@ import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.firestore.*
+import com.thing.allied.FirestoreList
+import com.thing.allied.model.Announcement
 import com.thing.allied.model.Gender
 import com.thing.allied.model.User
 import java.lang.reflect.InvocationTargetException
@@ -25,7 +27,11 @@ object UserHandler {
 
     private val usersRef = FirebaseFirestore.getInstance().collection("users")
     private val adminsRef = FirebaseFirestore.getInstance().collection("admins")
-    val announcementsRef = FirebaseFirestore.getInstance().collection("announcements")
+    private val announcementsRef = FirebaseFirestore.getInstance().collection("announcements")
+
+    var announcements = FirestoreList<Announcement>(Announcement::class.java, announcementsRef)
+
+
     val isAdmin = false
     private val preferences: SharedPreferences? = null
 
