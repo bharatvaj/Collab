@@ -149,27 +149,7 @@ object UserHandler {
                 if (documentSnapshot.exists()) {
                     onUserUpdate(documentSnapshot.toObject<User>(User::class.java))
                 } else {
-                    //if user object does'nt exist, create one
-                    val user = User(
-                        uid,
-                        "",
-                        uid,
-                        0,
-                        "",
-                        "",
-                        Gender.OTHER,
-                        "",
-                        ArrayList(),
-                        ArrayList()
-                    )
-                    usersRef!!.document(uid)
-                        .set(user, SetOptions.merge())
-                        .addOnSuccessListener {
-                            onUserUpdate(user)
-                        }
-                        .addOnFailureListener {
-                            onUserUpdate(null)
-                        }
+                    onUserUpdate(null)
                 }
             }
             .addOnFailureListener { onUserUpdate(null) }

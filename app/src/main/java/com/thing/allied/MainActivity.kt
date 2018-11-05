@@ -12,6 +12,7 @@ import com.thing.allied.handler.UserHandler
 import kotlinx.android.synthetic.main.announce_layout.*
 import kotlinx.android.synthetic.main.content_main.*
 import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppActivity() {
 
@@ -44,7 +45,7 @@ class MainActivity : AppActivity() {
             adapter.notifyDataSetChanged()
         }
 
-        val attachments: MutableList<String> = ArrayList()
+        val attachments: ArrayList<String> = ArrayList()
 
         announceAttachmentRecyclerView!!.layoutManager =
                 LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
